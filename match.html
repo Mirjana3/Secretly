@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Your match – Secretly</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/match.css" />
+  </head>
+  <body class="match">
+    <header class="bar" id="appbar">
+      <div class="wrap row" style="justify-content: space-between; width: 100%">
+        <button class="logo" data-go="dash"><i><img src="pictures/gift.svg" alt="" /></i>Secretly</button>
+        <div class="row">
+          <button class="btn" id="quizBtn">My Gift Quiz</button>
+          <div
+            class="av"
+            id="avTop"
+            role="button"
+            tabindex="0"
+            aria-label="Open profile"
+            data-go="profile"
+          ></div>
+        </div>
+      </div>
+    </header>
+    <div class="wrap page">
+      <button class="btn ghost" id="back" style="padding-left: 0">
+        ← Back to lobby
+      </button>
+      <div class="card" id="mc" style="margin-top: 8px">
+        <p class="mut" role="status">Loading your match…</p>
+      </div>
+      <div id="localGifts" class="hide">
+        <div class="ai">
+          <span style="font-size: 24px">✨</span>
+          <h2 id="aiT"></h2>
+        </div>
+        <div class="local-note" id="stockNote" role="note"></div>
+        <div class="location-tools">
+          <button class="btn" id="nearby"></button>
+          <span class="mut" id="locationPrivacy"></span>
+        </div>
+        <div class="nearby-stores" id="nearbyStores" aria-live="polite"></div>
+        <div class="grid3" id="ideas"></div>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/match.js"></script>
+  </body>
+</html>

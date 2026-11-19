@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Profile – Secretly</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body class="profile">
+    <header class="bar" id="appbar">
+      <div class="wrap row" style="justify-content: space-between; width: 100%">
+        <button class="logo" data-go="dash"><i><img src="pictures/gift.svg" alt="" /></i>Secretly</button>
+        <div class="row">
+          <button class="btn" id="quizBtn">My Gift Quiz</button>
+          <div
+            class="av"
+            id="avTop"
+            role="button"
+            tabindex="0"
+            aria-label="Open profile"
+            data-go="profile"
+          ></div>
+        </div>
+      </div>
+    </header>
+    <div class="wrap page">
+      <div class="prof">
+        <div class="side">
+          <button class="on" data-pt="info">Personal Info</button
+          ><button data-pt="quiz">My Quiz</button
+          ><button data-pt="saved">Saved Gifts</button
+          ><button id="out" style="margin-top: 12px">Log out</button>
+        </div>
+        <div class="card">
+          <div class="row" style="margin-bottom: 10px">
+            <div
+              class="av"
+              id="avBig"
+              style="
+                width: 64px;
+                height: 64px;
+                font-size: 20px;
+                cursor: default;
+              "
+            ></div>
+            <div>
+              <h2 id="pn" style="font-size: 22px"></h2>
+              <div class="mut" id="pe"></div>
+            </div>
+          </div>
+          <div id="p-info">
+            <div class="two">
+              <div><label>First name</label><input id="pf" /></div>
+              <div><label>Last name</label><input id="pl" /></div>
+            </div>
+            <div class="two">
+              <div><label>Email</label><input id="pm" type="email" /></div>
+              <div>
+                <label>Gender</label
+                ><select id="pg">
+                  <option>Female</option>
+                  <option>Male</option>
+                  <option>Non-binary</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div id="p-quiz" class="hide"></div>
+          <div style="margin-top: 18px">
+            <label>Quiz summary</label>
+            <div class="chips" id="qs"></div>
+          </div>
+          <button class="btn red full" id="savP">Save changes</button>
+        </div>
+      </div>
+      <div id="saved" style="margin-top: 34px">
+        <h2 style="font-size: 22px; margin-bottom: 14px">Saved gifts</h2>
+        <div class="grid3" id="sg"></div>
+      </div>
+      <h2 style="font-size: 22px; margin: 34px 0 8px">Recent activity</h2>
+      <div class="card" style="padding: 6px 22px">
+        <ul class="act" id="act"></ul>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>

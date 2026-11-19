@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign up – Secretly</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+  <body class="auth">
+    <div class="split">
+      <div class="l">
+        <button class="logo" data-go="home"><i><img src="pictures/gift.svg" alt="" /></i>Secretly</button>
+        <div class="ill">
+          <svg viewBox="0 0 400 380" aria-hidden="true">
+            <circle cx="80" cy="60" r="3" fill="#fff" />
+            <circle cx="320" cy="90" r="3" fill="#fff" />
+            <circle cx="50" cy="160" r="2.5" fill="#fff" />
+            <ellipse
+              cx="200"
+              cy="370"
+              rx="260"
+              ry="70"
+              fill="#fff"
+              opacity=".7"
+            />
+            <path
+              d="M200 70 L290 210 L250 210 L320 310 L80 310 L150 210 L110 210Z"
+              fill="#2d6a4f"
+            />
+            <rect x="186" y="305" width="28" height="40" fill="#8a5a44" />
+            <path
+              d="M200 38l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"
+              fill="#e9c46a"
+            />
+            <circle cx="180" cy="170" r="6" fill="#D62828" />
+            <circle cx="225" cy="240" r="6" fill="#e9c46a" />
+            <rect x="60" y="310" width="70" height="50" rx="8" fill="#D62828" />
+            <rect x="90" y="310" width="10" height="50" fill="#e9c46a" />
+            <rect
+              x="270"
+              y="295"
+              width="75"
+              height="65"
+              rx="8"
+              fill="#f4e6d3"
+            />
+            <rect x="302" y="295" width="11" height="65" fill="#c9a03a" /></svg
+          ><span class="tag">A LITTLE HOLIDAY MAGIC</span>
+        </div>
+        <p class="cap">Good surprises start with knowing someone well.</p>
+      </div>
+      <div class="r">
+        <div id="st1">
+          <div class="eye">WELCOME TO SECRETLY</div>
+          <h2 id="authT" style="font-size: 34px; font-weight: 800">
+            Start something joyful.
+          </h2>
+          <p class="mut" id="authS" style="margin: 6px 0 0">
+            Create an account and make this year’s exchange effortless.
+          </p>
+          <div class="tabs">
+            <button class="on" data-tab="signup">Sign Up</button
+            ><button data-tab="login">Log In</button>
+          </div>
+          <div class="two su">
+            <div>
+              <label>First name</label
+              ><input id="fn" autocomplete="given-name" />
+            </div>
+            <div>
+              <label>Last name</label
+              ><input id="ln" autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="su">
+            <label>Gender</label
+            ><select id="gd">
+              <option value="">Select gender</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Non-binary</option>
+              <option>Prefer not to say</option>
+            </select>
+          </div>
+          <label>Email</label
+          ><input id="em" type="email" autocomplete="email" /><label
+            >Password</label
+          ><input id="pw" type="password" autocomplete="current-password" />
+          <button class="btn red full" id="authGo">Create Account</button>
+          <div class="or">OR</div>
+          <button class="btn full" id="google" style="margin: 0">
+            <b style="color: #4285f4">G</b> Continue with Google
+          </button>
+        </div>
+        <div id="st2" class="hide">
+          <div class="eye">AI GIFT QUIZ · STEP 2</div>
+          <div class="quiz-heading">
+            <div>
+              <h2
+                style="font-size: 34px; font-weight: 800"
+                data-i18n="quizTitle"
+              >
+                Help us know you.
+              </h2>
+              <p class="mut" style="margin: 6px 0 0" data-i18n="quizIntro">
+                Your answers help your Secret Santa choose something that feels
+                personal.
+              </p>
+            </div>
+            <label class="language-picker"
+              ><span data-i18n="language">Language</span>
+              <select data-language aria-label="Language">
+                <option value="hr">Hrvatski</option>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+              </select>
+            </label>
+          </div>
+          <section class="quiz-section">
+            <div class="quiz-section-title">
+              <label data-i18n="interests">Your interests</label>
+              <button
+                type="button"
+                class="btn add-option"
+                data-add-custom="interests"
+              >
+                + <span data-i18n="addInterest">Add an interest</span>
+              </button>
+            </div>
+            <div
+              class="chips choice-list"
+              data-g="tags"
+              data-list="interests"
+            ></div>
+            <button
+              type="button"
+              class="more-link"
+              data-expand="interests"
+              aria-expanded="false"
+              data-i18n="more"
+            >
+              More
+            </button>
+          </section>
+          <section class="quiz-section">
+            <label data-i18n="clothingSize">Clothing size</label>
+            <div class="chips" data-g="size" data-one="1"></div>
+          </section>
+          <div class="two quiz-section">
+            <div>
+              <label data-i18n="favoriteColors">Favorite colors</label
+              ><input id="co" placeholder="Green, cream…" />
+            </div>
+            <div>
+              <label data-i18n="dislikes">Things I don’t want</label
+              ><input id="dl" placeholder="Scented candles…" />
+            </div>
+          </div>
+          <section class="quiz-section">
+            <div class="quiz-section-title">
+              <label data-i18n="giftIdeas">Gift ideas</label>
+              <button
+                type="button"
+                class="btn add-option"
+                data-add-custom="wishes"
+              >
+                + <span data-i18n="addGiftIdea">Add a gift idea</span>
+              </button>
+            </div>
+            <p
+              class="mut"
+              style="font-size: 13px; margin: 0 0 8px"
+              data-i18n="giftIdeasHelp"
+            >
+              Choose any that fit, then add a specific wish below if it isn’t
+              listed.
+            </p>
+            <div class="chips choice-list" data-wishes data-list="wishes"></div>
+            <button
+              type="button"
+              class="more-link"
+              data-expand="wishes"
+              aria-expanded="false"
+              data-i18n="more"
+            >
+              More
+            </button>
+          </section>
+          <label for="wl" data-i18n="otherWishes">Other wishes</label>
+          <textarea
+            id="wl"
+            rows="3"
+            data-i18n-placeholder="wishPlaceholder"
+            placeholder="Write a specific gift, brand, book, or anything else you’d love…"
+          ></textarea>
+          <button class="btn red full" id="saveQ" data-i18n="saveQuiz">
+            Save My Quiz →
+          </button>
+        </div>
+      </div>
+    </div>
+    <dialog
+      class="custom-dialog"
+      id="customDialog"
+      aria-labelledby="customDialogTitle"
+    >
+      <form id="customForm">
+        <h2 id="customDialogTitle"></h2>
+        <label for="customValue" data-i18n="yourEntry"
+          >Type your own option</label
+        >
+        <input id="customValue" maxlength="60" autocomplete="off" />
+        <div class="dialog-actions">
+          <button
+            type="button"
+            class="btn"
+            id="cancelCustom"
+            data-i18n="cancel"
+          >
+            Cancel
+          </button>
+          <button type="submit" class="btn red" data-i18n="addOption">
+            Add
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

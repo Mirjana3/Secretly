@@ -1,0 +1,4 @@
+/* Dashboard: this page uses only the shared styles in base.css, add dashboard-only rules here */
+.grid2 .card h3 {
+  margin-bottom: 6px;
+}

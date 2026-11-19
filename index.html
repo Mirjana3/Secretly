@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home – Secretly</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body class="home">
+    <div class="bar">
+      <div class="wrap row" style="justify-content: space-between; width: 100%">
+        <button class="logo" data-go="home"><i><img src="pictures/gift.svg" alt="" /></i>Secretly</button>
+        <nav class="links">
+          <a data-sc="home">Home</a>
+          <a data-sc="how">How It Works</a>
+          <a data-sc="about">About Us</a>
+          <a data-sc="contact">Contact</a>
+        </nav>
+        <div class="row">
+          <button class="btn ghost" data-auth="login">Log In</button
+          ><button class="btn red" data-auth="signup">Get Started</button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="hero" id="home">
+        <div>
+          <h1>Effortless Secret Santa, <b>Powered by AI</b></h1>
+          <p class="sub">
+            Create a room, draw names, and discover thoughtful gifts your person
+            will genuinely love. Less guessing, more giving.
+          </p>
+          <div class="row">
+            <button class="btn red" data-go="dash">Create a Room</button
+            ><button class="btn" data-go="dash">Join with Code</button>
+          </div>
+          <p class="mut" style="font-size: 12px; margin-top: 22px">
+            Loved by <b>12,000+</b> thoughtful gifters
+          </p>
+        </div>
+        <div class="art">
+          <svg
+            viewBox="0 0 400 380"
+            role="img"
+            aria-label="Christmas tree with presents"
+          >
+            <circle cx="80" cy="60" r="3" fill="#fff" />
+            <circle cx="320" cy="90" r="3" fill="#fff" />
+            <circle cx="260" cy="40" r="2.5" fill="#fff" />
+            <circle cx="50" cy="160" r="2.5" fill="#fff" />
+            <circle cx="350" cy="190" r="3" fill="#fff" />
+            <ellipse
+              cx="200"
+              cy="370"
+              rx="260"
+              ry="70"
+              fill="#fff"
+              opacity=".7"
+            />
+            <path
+              d="M200 70 L290 210 L250 210 L320 310 L80 310 L150 210 L110 210Z"
+              fill="#2d6a4f"
+            />
+            <rect x="186" y="305" width="28" height="40" fill="#8a5a44" />
+            <path
+              d="M200 38l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"
+              fill="#e9c46a"
+            />
+            <circle cx="180" cy="170" r="6" fill="#D62828" />
+            <circle cx="225" cy="240" r="6" fill="#e9c46a" />
+            <circle cx="170" cy="270" r="6" fill="#D62828" />
+            <rect x="60" y="310" width="70" height="50" rx="8" fill="#D62828" />
+            <rect x="90" y="310" width="10" height="50" fill="#e9c46a" />
+            <rect
+              x="270"
+              y="295"
+              width="75"
+              height="65"
+              rx="8"
+              fill="#f4e6d3"
+            />
+            <rect x="302" y="295" width="11" height="65" fill="#c9a03a" />
+          </svg>
+        </div>
+      </div>
+      <div id="how" style="padding-top: 20px">
+        <h2 style="font-size: 28px">How it works</h2>
+        <p class="mut">
+          From group chat to the perfect gift in three cheerful steps.
+        </p>
+      </div>
+      <div class="steps">
+        <div class="card click" data-go="dash" tabindex="0">
+          <div class="ic">👥</div>
+          <h3>Create or join a room</h3>
+          <p class="mut">
+            Set a date and budget, then invite your favorite people.
+          </p>
+        </div>
+        <div class="card click" data-auth="quiz" tabindex="0">
+          <div class="ic">📝</div>
+          <h3>Take the AI gift quiz</h3>
+          <p class="mut">Share your interests, wishes, sizes, and hard no’s.</p>
+        </div>
+        <div class="card click" data-go="dash" tabindex="0">
+          <div class="ic">🔀</div>
+          <h3>Draw names</h3>
+          <p class="mut">
+            We match everyone fairly and keep every name secret.
+          </p>
+        </div>
+      </div>
+      <div class="banner" id="aib">
+        <div>
+          <h2>AI ideas that feel surprisingly personal.</h2>
+          <p>
+            Our AI uses their quiz, not generic trends, to find thoughtful ideas
+            within your exact budget.
+          </p>
+        </div>
+        <button class="btn" data-auth="signup">Explore Gift Ideas</button>
+      </div>
+      <div class="card note" id="about">
+        <h2>Fair draws. Private matches. Better gifts.</h2>
+        <p class="mut" style="margin: 0">
+          Matches stay secret until exchange day, and your quiz is only shown to
+          the person buying for you.
+        </p>
+      </div>
+      <section class="contact-section" id="contact">
+        <div class="card contact-card">
+          <h2>Contact</h2>
+          <p class="mut">Have a question? Send us an email.</p>
+          <a class="contact-email" href="mailto:mirjanam2003@gmail.com">
+            mirjanam2003@gmail.com
+          </a>
+        </div>
+        <section class="card reviews-section" aria-labelledby="reviewsTitle">
+          <div class="reviews-heading">
+            <div>
+              <h2 id="reviewsTitle">Community reviews</h2>
+              <p class="mut">Ratings and comments from Secretly users.</p>
+            </div>
+          </div>
+          <div id="reviewsStatus" class="mut" role="status">Loading reviews…</div>
+          <div class="review-list" id="reviewsList"></div>
+          <div id="reviewGuest" class="review-guest hide">
+            <p class="mut">Sign in to leave a review. Your first name and review will be public.</p>
+            <button class="btn" data-auth="login">Log In</button>
+            <button class="btn red" data-auth="signup">Create Account</button>
+          </div>
+          <form id="reviewForm" class="review-form hide">
+            <p class="mut" id="reviewIdentity"></p>
+            <fieldset class="star-rating" id="starRating">
+              <legend>Your rating</legend>
+              <label><input type="radio" name="rating" value="1" required /><span aria-hidden="true">★</span><span class="sr-only">1 star</span></label>
+              <label><input type="radio" name="rating" value="2" /><span aria-hidden="true">★</span><span class="sr-only">2 stars</span></label>
+              <label><input type="radio" name="rating" value="3" /><span aria-hidden="true">★</span><span class="sr-only">3 stars</span></label>
+              <label><input type="radio" name="rating" value="4" /><span aria-hidden="true">★</span><span class="sr-only">4 stars</span></label>
+              <label><input type="radio" name="rating" value="5" /><span aria-hidden="true">★</span><span class="sr-only">5 stars</span></label>
+            </fieldset>
+            <label for="reviewComment">Short comment</label>
+            <textarea id="reviewComment" rows="3" maxlength="300" required placeholder="What did you think of Secretly?"></textarea>
+            <p class="mut review-privacy">Your first name and comment are visible to everyone. One review per account; you can edit it later.</p>
+            <button class="btn red" id="submitReview" type="submit">Post review</button>
+          </form>
+        </section>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

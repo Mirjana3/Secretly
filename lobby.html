@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Group lobby – Secretly</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/lobby.css" />
+  </head>
+  <body class="lobby">
+    <header class="bar" id="appbar">
+      <div class="wrap row" style="justify-content: space-between; width: 100%">
+        <button class="logo" data-go="dash"><i><img src="pictures/gift.svg" alt="" /></i>Secretly</button>
+        <div class="row">
+          <button class="btn" id="quizBtn">My Gift Quiz</button>
+          <div
+            class="av"
+            id="avTop"
+            role="button"
+            tabindex="0"
+            aria-label="Open profile"
+            data-go="profile"
+          ></div>
+        </div>
+      </div>
+    </header>
+    <div class="wrap page">
+      <div class="hd">
+        <div>
+          <h1 id="lN"></h1>
+          <p class="mut" id="lM" style="margin: 4px 0 0"></p>
+        </div>
+        <span class="badge" id="lB"></span>
+      </div>
+      <div class="invite">
+        <div>
+          <div style="font-size: 13px; color: #b9d3c3">Invite code</div>
+          <div class="code" id="lC"></div>
+        </div>
+        <button class="btn" id="cp" style="color: #1b4332; background: #fff">
+          Copy code
+        </button>
+      </div>
+      <h2 style="font-size: 20px; margin-bottom: 14px">Members</h2>
+      <div
+        class="grid3"
+        id="mems"
+        style="grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))"
+      ></div>
+      <div class="dock">
+        <button
+          class="btn red"
+          id="draw"
+          style="padding: 15px 38px; font-size: 16px"
+        >
+          Draw Names
+        </button>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/lobby.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+/* Group lobby */
+.invite {
+  background: #1b4332;
+  color: #fff;
+  border-radius: 20px;
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.code {
+  font: 800 32px "Plus Jakarta Sans";
+  letter-spacing: 0.14em;
+  color: var(--gold);
+}
+.mem {
+  text-align: center;
+}
+.mem .av {
+  margin: 0 auto 10px;
+  width: 56px;
+  height: 56px;
+  font-size: 17px;
+  cursor: default;
+}
+.dock {
+  text-align: center;
+  margin-top: 30px;
+}
+.roll {
+  font: 800 28px "Plus Jakarta Sans";
+  padding: 20px;
+}

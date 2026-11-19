@@ -1,0 +1,90 @@
+/* Match + locally oriented gift suggestions */
+.ai {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 10px;
+}
+.ai h2 {
+  font-size: 22px;
+}
+.local-note {
+  max-width: 760px;
+  padding: 12px 15px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff9e8;
+  color: #6b5420;
+  font-size: 13px;
+}
+.location-tools {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+.location-tools .mut {
+  font-size: 12px;
+  max-width: 520px;
+}
+.nearby-stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+.nearby-stores a,
+.store-links a {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 99px;
+  padding: 6px 11px;
+  color: var(--fg);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nearby-stores a:hover,
+.store-links a:hover {
+  text-decoration: underline;
+  border-color: var(--fg);
+}
+.availability {
+  display: inline-flex;
+  margin: 10px 0 0;
+  padding: 4px 9px;
+  border-radius: 99px;
+  background: #fff1cf;
+  color: #765500;
+  font-size: 11px;
+  font-weight: 700;
+}
+.store-label {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 14px 0 7px;
+}
+.store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.reason {
+  font-size: 13px;
+  color: var(--mut);
+  margin: 8px 0 0;
+}
+.idea-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+}
+@media (max-width: 600px) {
+  .idea-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
