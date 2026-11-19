@@ -63,8 +63,10 @@ async function loadReviews(){
   renderReviews(snapshot.docs);
   renderReviewForm();
  }catch(error){
-  $('reviewsStatus').textContent='Could not load reviews. Please try again later.';
-  return fail(error);
+  console.error(error);
+  $('reviewsStatus').textContent=error&&error.code==='permission-denied'
+   ?'Reviews are unavailable. Publish the latest firestore.rules in Firebase Console to enable them.'
+   :'Could not load reviews. Please try again later.';
  }
 }
 
